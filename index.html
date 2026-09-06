@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FazCents — Organizar seu dinheiro com a gente FazCents!</title>
+<meta name="description" content="FazCents: o app de controle financeiro pessoal que junta lançamentos, parcelamentos, orçamento e gráficos num só lugar, sem depender de internet. Em breve.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%AA%99%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="pular-conteudo" href="#inicio">Pular para o conteúdo</a>
+
+<header class="cabecalho" id="topo">
+  <div class="container cabecalho-inner">
+    <a class="logo" href="#topo" aria-label="FazCents — início">
+      <span class="logo-moeda" aria-hidden="true">₵</span>
+      <span>FazCents</span>
+    </a>
+
+    <nav class="nav" id="nav-principal">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#graficos">Gráficos</a>
+      <a href="#novidades">Novidades</a>
+    </nav>
+
+    <div class="cabecalho-acoes">
+      <button class="botao-tema" id="botao-tema" type="button" aria-label="Alternar modo escuro" aria-pressed="false">
+        <svg class="icone-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2.5 12h2.6M18.9 12h2.6M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        <svg class="icone-lua" viewBox="0 0 24 24" fill="currentColor"><path d="M20.7 14.9A8.5 8.5 0 1 1 9.1 3.3a7 7 0 0 0 11.6 11.6z"/></svg>
+      </button>
+      <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-principal">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-fundo" aria-hidden="true">
+      <span class="mancha mancha-1"></span>
+      <span class="mancha mancha-2"></span>
+      <span class="mancha mancha-3"></span>
+      <span class="moeda-flutuante m1">₵</span>
+      <span class="moeda-flutuante m2">$</span>
+      <span class="moeda-flutuante m3">¢</span>
+      <span class="moeda-flutuante m4">₵</span>
+    </div>
+
+    <div class="container hero-grid">
+      <div class="hero-texto">
+        <span class="selo reveal">🚀 Chegando em breve</span>
+        <h1 class="reveal" style="transition-delay:.05s">Organizar seu dinheiro<br>com a gente <span class="destaque">FazCents!</span></h1>
+        <p class="hero-sub reveal" style="transition-delay:.1s">
+          Lançamentos, parcelamentos, orçamento por categoria e gráficos claros num só app —
+          local-first, sem anúncio e sem depender de internet para funcionar.
+        </p>
+        <div class="hero-botoes reveal" style="transition-delay:.15s">
+          <a href="#novidades" class="botao botao-primario">Quero ser avisado</a>
+          <a href="#como-funciona" class="botao botao-fantasma">Ver como funciona ↓</a>
+        </div>
+        <p class="hero-nota reveal" style="transition-delay:.2s">Sem cadastro nesta etapa · sem spam · um e-mail quando lançar</p>
+      </div>
+
+      <div class="hero-visual reveal" style="transition-delay:.1s">
+        <div class="telefone">
+          <div class="telefone-notch"></div>
+          <div class="telefone-tela">
+            <div class="tela-cabecalho">
+              <div>
+                <span class="tela-rotulo">Resumo · Setembro</span>
+                <strong class="tela-saldo">R$ 2.480,90</strong>
+              </div>
+              <span class="tela-pill">+8,2%</span>
+            </div>
+
+            <div class="tela-donut-wrap">
+              <div class="tela-donut" style="--p1:38; --p2:27; --p3:19; --p4:16;">
+                <div class="tela-donut-centro">
+                  <span>Saídas</span>
+                  <strong>R$ 1.860</strong>
+                </div>
+              </div>
+              <ul class="tela-legenda">
+                <li><i style="background:var(--cor-cat-1)"></i>Moradia</li>
+                <li><i style="background:var(--cor-cat-2)"></i>Mercado</li>
+                <li><i style="background:var(--cor-cat-3)"></i>Transporte</li>
+                <li><i style="background:var(--cor-cat-4)"></i>Outros</li>
+              </ul>
+            </div>
+
+            <div class="tela-linha">
+              <div class="tela-item">
+                <span class="ponto ponto-saida"></span>
+                <div>
+                  <strong>Mercado</strong>
+                  <small>Hoje · Cartão</small>
+                </div>
+                <span class="valor-saida">- R$ 186,40</span>
+              </div>
+              <div class="tela-item">
+                <span class="ponto ponto-entrada"></span>
+                <div>
+                  <strong>Salário</strong>
+                  <small>Ontem · Conta corrente</small>
+                </div>
+                <span class="valor-entrada">+ R$ 3.200,00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <svg class="hero-onda" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,40 C240,90 480,0 720,30 C960,60 1200,10 1440,45 L1440,90 L0,90 Z"></path>
+    </svg>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="sobre">
+    <div class="container sobre-grid">
+      <div class="reveal">
+        <h2>O que é o FazCents</h2>
+        <p>
+          O FazCents nasceu de uma planilha de verdade: anos de controle financeiro manual,
+          agora reconstruídos como um aplicativo próprio. A ideia continua a mesma — saber
+          exatamente para onde o dinheiro vai, sem depender de banco nem de investimento pra isso —
+          só que agora com parcelamento automático, orçamento por categoria, backup em um clique
+          e gráficos que respondem na hora.
+        </p>
+        <p>
+          Ele roda inteiro no seu aparelho: sem anúncio, sem venda de dado e sem exigir internet
+          para o dia a dia. Criar uma conta será sempre opcional — só para quem quiser sincronizar
+          entre aparelhos ou dividir com a família.
+        </p>
+      </div>
+      <ul class="sobre-destaques reveal" style="transition-delay:.1s">
+        <li><strong>100%</strong><span>dos seus dados ficam no aparelho por padrão</span></li>
+        <li><strong>0</strong><span>anúncios ou coleta de dados para vender</span></li>
+        <li><strong>1 toque</strong><span>para lançar uma saída ou entrada</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="como-funciona" id="como-funciona">
+    <div class="container">
+      <div class="secao-titulo reveal">
+        <span class="rotulo-secao">Como funciona</span>
+        <h2>Do lançamento ao gráfico, em quatro passos</h2>
+      </div>
+    </div>
+
+    <div class="container como-scroller">
+      <div class="como-visual" aria-hidden="true">
+        <div class="como-ilustracao" data-passo="1">
+          <div class="mock-card mock-teclado">
+            <div class="mock-linha-topo">
+              <span class="mock-chip mock-chip-saida ativo">Saída</span>
+              <span class="mock-chip">Entrada</span>
+            </div>
+            <strong class="mock-valor-grande">R$ 47,90</strong>
+            <div class="mock-teclas">
+              <span>1</span><span>2</span><span>3</span>
+              <span>4</span><span>5</span><span>6</span>
+              <span>7</span><span>8</span><span>9</span>
+              <span>,</span><span>0</span><span>⌫</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="como-ilustracao" data-passo="2">
+          <div class="mock-card">
+            <span class="mock-titulo">Cadastros</span>
+            <ul class="mock-lista-cadastro">
+              <li><i style="background:var(--cor-cat-1)"></i>Moradia <small>débito</small></li>
+              <li><i style="background:var(--cor-cat-2)"></i>Mercado <small>crédito · vence dia 10</small></li>
+              <li><i style="background:var(--cor-cat-3)"></i>Transporte <small>débito</small></li>
+              <li><i style="background:var(--cor-cat-5)"></i>Assinaturas <small>crédito · vence dia 5</small></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="como-ilustracao" data-passo="3">
+          <div class="mock-card">
+            <span class="mock-titulo">Orçamento do mês</span>
+            <div class="mock-orcamento">
+              <div class="mock-orcamento-linha">
+                <span>Mercado</span><span>R$ 620 / 800</span>
+                <div class="mock-barra"><i style="width:78%;background:var(--cor-cat-2)"></i></div>
+              </div>
+              <div class="mock-orcamento-linha">
+                <span>Transporte</span><span>R$ 310 / 400</span>
+                <div class="mock-barra"><i style="width:77%;background:var(--cor-cat-3)"></i></div>
+              </div>
+              <div class="mock-orcamento-linha estourado">
+                <span>Lazer</span><span>R$ 260 / 200</span>
+                <div class="mock-barra"><i style="width:100%;background:var(--cor-saida)"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="como-ilustracao" data-passo="4">
+          <div class="mock-card">
+            <span class="mock-titulo">Saídas × entradas</span>
+            <div class="mock-mini-grafico">
+              <i style="--h:40%"></i><i style="--h:65%"></i><i style="--h:50%"></i>
+              <i style="--h:80%"></i><i style="--h:58%"></i><i style="--h:72%"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="como-passos">
+        <article class="como-passo" data-passo="1">
+          <span class="como-passo-numero">01</span>
+          <div class="como-passo-icone-mobile">⚡</div>
+          <h3>Lance em segundos</h3>
+          <p>Entrada rápida com teclado numérico próprio: escolha saída ou entrada, digite o
+            valor e pronto. Compra parcelada gera a série inteira sozinha.</p>
+        </article>
+
+        <article class="como-passo" data-passo="2">
+          <span class="como-passo-numero">02</span>
+          <div class="como-passo-icone-mobile">🗂️</div>
+          <h3>Organize por categoria e conta</h3>
+          <p>Categorias, bancos e pessoas ficam na ordem que você definir. Cada conta guarda
+            função, dia de vencimento e titular — sem confundir cartão de crédito com débito.</p>
+        </article>
+
+        <article class="como-passo" data-passo="3">
+          <span class="como-passo-numero">03</span>
+          <div class="como-passo-icone-mobile">🎯</div>
+          <h3>Defina orçamento e acompanhe</h3>
+          <p>Um limite por categoria a cada mês, com barra de consumo que avisa antes de
+            estourar — e saída fixa (aluguel, assinatura) projetada à frente sem virar lançamento.</p>
+        </article>
+
+        <article class="como-passo" data-passo="4">
+          <span class="como-passo-numero">04</span>
+          <div class="como-passo-icone-mobile">📊</div>
+          <h3>Veja para onde o dinheiro vai</h3>
+          <p>Um só cartão de gráfico no Resumo, três visões: saídas × entradas com média,
+            evolução de uma categoria e o que já está comprometido nos próximos meses.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECURSOS -->
+  <section class="recursos" id="recursos">
+    <div class="container">
+      <div class="secao-titulo reveal">
+        <span class="rotulo-secao">Recursos</span>
+        <h2>Feito para quem já controla o dinheiro na unha</h2>
+      </div>
+
+      <div class="grade-recursos">
+        <div class="cartao-recurso reveal">
+          <div class="icone-recurso">🧾</div>
+          <h3>Parcelamento de verdade</h3>
+          <p>Compra em N vezes vira uma série inteira, com edição por escopo: só esta parcela,
+            ou esta e as seguintes.</p>
+        </div>
+        <div class="cartao-recurso reveal" style="transition-delay:.05s">
+          <div class="icone-recurso">🎯</div>
+          <h3>Orçamento por categoria</h3>
+          <p>Limite mensal com barra de consumo e aviso visual antes de passar do combinado.</p>
+        </div>
+        <div class="cartao-recurso reveal" style="transition-delay:.1s">
+          <div class="icone-recurso">🔁</div>
+          <h3>Saída fixa como regra viva</h3>
+          <p>Aluguel, assinatura, financiamento: projeta os próximos meses sem inflar seu total
+            gasto antes da hora.</p>
+        </div>
+        <div class="cartao-recurso reveal" style="transition-delay:.15s">
+          <div class="icone-recurso">💾</div>
+          <h3>Backup completo</h3>
+          <p>Exporta tudo num único arquivo, restaura com um clique. Seus dados nunca ficam
+            reféns do aplicativo.</p>
+        </div>
+        <div class="cartao-recurso reveal" style="transition-delay:.2s">
+          <div class="icone-recurso">🔒</div>
+          <h3>Bloqueio por biometria ou PIN</h3>
+          <p>A tela do app fica protegida por digital, rosto ou PIN, com carência configurável.</p>
+        </div>
+        <div class="cartao-recurso reveal" style="transition-delay:.25s">
+          <div class="icone-recurso">📴</div>
+          <h3>Funciona 100% offline</h3>
+          <p>Sem internet, sem conta, sem letra miúda. Criar login será sempre uma opção, nunca
+            uma exigência.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRÁFICOS -->
+  <section class="graficos" id="graficos">
+    <div class="container">
+      <div class="secao-titulo reveal">
+        <span class="rotulo-secao">Gráficos</span>
+        <h2>Um cartão, três jeitos de enxergar o mês</h2>
+        <p class="secao-sub">A mesma prévia do cartão de gráfico do Resumo — troque a visão e veja.</p>
+      </div>
+
+      <div class="grafico-caixa reveal">
+        <div class="grafico-abas" role="tablist">
+          <button class="grafico-aba ativo" data-alvo="0" role="tab" aria-selected="true">Saídas × entradas</button>
+          <button class="grafico-aba" data-alvo="1" role="tab" aria-selected="false">Evolução da categoria</button>
+          <button class="grafico-aba" data-alvo="2" role="tab" aria-selected="false">Comprometido à frente</button>
+        </div>
+
+        <div class="grafico-paineis">
+
+          <!-- Painel 1: saídas x entradas -->
+          <div class="grafico-painel ativo" data-painel="0">
+            <svg viewBox="0 0 640 260" class="svg-grafico" preserveAspectRatio="xMidYMid meet">
+              <line x1="30" y1="205" x2="620" y2="205" class="eixo"></line>
+              <g class="barras-mes">
+                <!-- cada mês: saída (vermelho) + entrada (verde) -->
+                <rect class="barra barra-saida" x="55"  y="205" width="18" height="0" data-h="70"></rect>
+                <rect class="barra barra-entrada" x="76" y="205" width="18" height="0" data-h="120"></rect>
+
+                <rect class="barra barra-saida" x="140" y="205" width="18" height="0" data-h="95"></rect>
+                <rect class="barra barra-entrada" x="161" y="205" width="18" height="0" data-h="118"></rect>
+
+                <rect class="barra barra-saida" x="225" y="205" width="18" height="0" data-h="60"></rect>
+                <rect class="barra barra-entrada" x="246" y="205" width="18" height="0" data-h="122"></rect>
+
+                <rect class="barra barra-saida" x="310" y="205" width="18" height="0" data-h="110"></rect>
+                <rect class="barra barra-entrada" x="331" y="205" width="18" height="0" data-h="115"></rect>
+
+                <rect class="barra barra-saida" x="395" y="205" width="18" height="0" data-h="85"></rect>
+                <rect class="barra barra-entrada" x="416" y="205" width="18" height="0" data-h="130"></rect>
+
+                <rect class="barra barra-saida" x="480" y="205" width="18" height="0" data-h="100"></rect>
+                <rect class="barra barra-entrada" x="501" y="205" width="18" height="0" data-h="140"></rect>
+              </g>
+              <line x1="45" y1="140" x2="610" y2="150" class="linha-media" pathLength="100"></line>
+              <g class="rotulos-mes">
+                <text x="75" y="222">Abr</text>
+                <text x="160" y="222">Mai</text>
+                <text x="245" y="222">Jun</text>
+                <text x="330" y="222">Jul</text>
+                <text x="415" y="222">Ago</text>
+                <text x="500" y="222">Set</text>
+              </g>
+            </svg>
+            <div class="grafico-legenda">
+              <span><i class="pt pt-saida"></i>Saídas</span>
+              <span><i class="pt pt-entrada"></i>Entradas</span>
+              <span><i class="pt pt-media"></i>Média (12 meses)</span>
+            </div>
+          </div>
+
+          <!-- Painel 2: evolução da categoria -->
+          <div class="grafico-painel" data-painel="1">
+            <svg viewBox="0 0 640 260" class="svg-grafico" preserveAspectRatio="xMidYMid meet">
+              <line x1="30" y1="205" x2="620" y2="205" class="eixo"></line>
+              <path class="area-categoria"
+                d="M55,150 L145,120 L235,160 L325,95 L415,110 L505,70 L590,90 L590,205 L55,205 Z"
+                pathLength="100"></path>
+              <path class="linha-categoria"
+                d="M55,150 L145,120 L235,160 L325,95 L415,110 L505,70 L590,90"
+                pathLength="100"></path>
+              <g class="pontos-categoria">
+                <circle cx="55" cy="150" r="4"></circle>
+                <circle cx="145" cy="120" r="4"></circle>
+                <circle cx="235" cy="160" r="4"></circle>
+                <circle cx="325" cy="95" r="4"></circle>
+                <circle cx="415" cy="110" r="4"></circle>
+                <circle cx="505" cy="70" r="4"></circle>
+                <circle cx="590" cy="90" r="4"></circle>
+              </g>
+              <g class="rotulos-mes">
+                <text x="55" y="222">Abr</text>
+                <text x="145" y="222">Mai</text>
+                <text x="235" y="222">Jun</text>
+                <text x="325" y="222">Jul</text>
+                <text x="415" y="222">Ago</text>
+                <text x="505" y="222">Set</text>
+              </g>
+            </svg>
+            <div class="grafico-legenda">
+              <span><i class="pt pt-categoria"></i>Mercado</span>
+              <span class="grafico-legenda-nota">Teto de 12 meses, sempre a mesma base de comparação</span>
+            </div>
+          </div>
+
+          <!-- Painel 3: comprometido à frente -->
+          <div class="grafico-painel" data-painel="2">
+            <svg viewBox="0 0 640 260" class="svg-grafico" preserveAspectRatio="xMidYMid meet">
+              <line x1="30" y1="205" x2="620" y2="205" class="eixo"></line>
+              <g class="barras-frente">
+                <rect class="barra barra-realizado" x="60"  y="205" width="34" height="0" data-h="90"></rect>
+                <rect class="barra barra-realizado" x="150" y="205" width="34" height="0" data-h="70"></rect>
+                <rect class="barra barra-previsto"  x="240" y="205" width="34" height="0" data-h="110"></rect>
+                <rect class="barra barra-previsto"  x="330" y="205" width="34" height="0" data-h="95"></rect>
+                <rect class="barra barra-previsto"  x="420" y="205" width="34" height="0" data-h="100"></rect>
+                <rect class="barra barra-previsto"  x="510" y="205" width="34" height="0" data-h="105"></rect>
+              </g>
+              <g class="rotulos-mes">
+                <text x="77"  y="222">Set</text>
+                <text x="167" y="222">Out</text>
+                <text x="257" y="222">Nov</text>
+                <text x="347" y="222">Dez</text>
+                <text x="437" y="222">Jan</text>
+                <text x="527" y="222">Fev</text>
+              </g>
+            </svg>
+            <div class="grafico-legenda">
+              <span><i class="pt pt-realizado"></i>Já lançado</span>
+              <span><i class="pt pt-previsto"></i>Previsto (saída fixa)</span>
+              <span class="grafico-legenda-nota">Sempre 6 meses à frente, fora do total do mês</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <div class="secao-titulo reveal">
+        <span class="rotulo-secao">Perguntas</span>
+        <h2>Antes de perguntar nos comentários</h2>
+      </div>
+      <div class="lista-faq">
+        <details class="item-faq reveal">
+          <summary>Precisa de internet para usar?</summary>
+          <p>Não. O FazCents funciona inteiro offline — lançamentos, orçamento, gráficos e
+            backup não dependem de rede. Criar conta será opcional, só para quem quiser
+            sincronizar entre aparelhos.</p>
+        </details>
+        <details class="item-faq reveal">
+          <summary>Meus dados financeiros ficam seguros?</summary>
+          <p>Por padrão, tudo fica só no seu aparelho, sem sair dele. O acesso ao app pode ser
+            travado por biometria ou PIN. Vamos deixar isso bem claro dentro do app, sem
+            prometer mais proteção do que realmente existe em cada etapa.</p>
+        </details>
+        <details class="item-faq reveal">
+          <summary>Vai ter para iPhone?</summary>
+          <p>O desenvolvimento começou focado em Android. Outras plataformas podem entrar
+            depois, dependendo de como for a fase inicial.</p>
+        </details>
+        <details class="item-faq reveal">
+          <summary>É pago?</summary>
+          <p>Ainda não temos nada definido sobre preço. Quem se inscrever abaixo é avisado
+            primeiro, com essa informação incluída.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="novidades" id="novidades">
+    <div class="container novidades-caixa reveal">
+      <div class="novidades-texto">
+        <h2>Seja o primeiro a saber</h2>
+        <p>Um e-mail só quando o FazCents estiver pronto para instalar. Sem newsletter, sem
+          spam, sem venda de contato.</p>
+      </div>
+      <form id="form-aviso" class="form-aviso" novalidate>
+        <label for="email" class="rotulo-oculto">Seu e-mail</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email">
+        <button type="submit">
+          <span class="rotulo-botao">Me avise</span>
+          <span class="rotulo-carregando" hidden>Enviando…</span>
+        </button>
+      </form>
+      <p id="mensagem-form" class="mensagem-form" role="status" hidden></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="container rodape-grid">
+    <div>
+      <a class="logo logo-rodape" href="#topo">
+        <span class="logo-moeda" aria-hidden="true">₵</span>
+        <span>FazCents</span>
+      </a>
+      <p>Organizar seu dinheiro com a gente FazCents!</p>
+    </div>
+    <nav class="rodape-links">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#graficos">Gráficos</a>
+      <a href="#novidades">Novidades</a>
+    </nav>
+    <p class="rodape-copy">
+      &copy; <span id="ano"></span> FazCents. Projeto independente, não afiliado a bancos ou
+      instituições financeiras.
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
