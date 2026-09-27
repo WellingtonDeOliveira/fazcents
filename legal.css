@@ -1,0 +1,226 @@
+/* =========================================================
+   Páginas de documento (privacidade, termos, exclusão de conta).
+   Usa os tokens de styles.css; só acrescenta a tipografia de
+   leitura longa e o índice.
+   ========================================================= */
+
+.documento {
+  padding: 48px 0 72px;
+}
+
+.documento-grid {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.documento-indice {
+  position: sticky;
+  top: 96px;
+  font-size: .88rem;
+}
+
+.documento-indice strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: .78rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--cor-texto-suave);
+}
+
+.documento-indice ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid var(--cor-borda);
+}
+
+.documento-indice a {
+  display: block;
+  padding: 6px 0 6px 14px;
+  margin-left: -2px;
+  border-left: 2px solid transparent;
+  color: var(--cor-texto-suave);
+  text-decoration: none;
+  line-height: 1.35;
+}
+
+.documento-indice a:hover,
+.documento-indice a.ativo {
+  color: var(--cor-primaria);
+  border-left-color: var(--cor-primaria);
+}
+
+.documento-corpo {
+  max-width: 72ch;
+  line-height: 1.7;
+  color: var(--cor-texto);
+}
+
+.documento-corpo h1 {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+
+.documento-data {
+  margin: 0 0 28px;
+  color: var(--cor-texto-suave);
+  font-size: .9rem;
+}
+
+.documento-corpo h2 {
+  font-size: 1.3rem;
+  margin: 44px 0 12px;
+  scroll-margin-top: 96px;
+}
+
+.documento-corpo h3 {
+  font-size: 1.02rem;
+  margin: 26px 0 8px;
+}
+
+.documento-corpo p,
+.documento-corpo li {
+  color: var(--cor-texto-suave);
+}
+
+.documento-corpo strong { color: var(--cor-texto); }
+
+.documento-corpo ul,
+.documento-corpo ol {
+  padding-left: 1.3em;
+}
+
+.documento-corpo li { margin: 6px 0; }
+
+.documento-corpo a {
+  color: var(--cor-primaria);
+  text-underline-offset: 3px;
+}
+
+.documento-resumo {
+  margin: 0 0 8px;
+  padding: 20px 22px;
+  border-radius: 16px;
+  background: var(--cor-primaria-container);
+  color: var(--cor-texto);
+}
+
+.documento-resumo p { color: var(--cor-texto); margin: 0 0 8px; }
+.documento-resumo ul { margin: 0; }
+.documento-resumo li { color: var(--cor-texto); }
+
+.documento-aviso {
+  margin: 18px 0;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: var(--cor-aviso-container);
+  color: var(--cor-texto);
+}
+
+.documento-aviso p { color: var(--cor-texto); margin: 0; }
+
+.tabela-rolagem {
+  overflow-x: auto;
+  margin: 14px 0;
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+}
+
+.documento-corpo table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .92rem;
+  min-width: 560px;
+}
+
+.documento-corpo th,
+.documento-corpo td {
+  text-align: left;
+  vertical-align: top;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--cor-borda);
+  color: var(--cor-texto-suave);
+}
+
+.documento-corpo th {
+  background: var(--cor-superficie-alta);
+  color: var(--cor-texto);
+  font-weight: 600;
+}
+
+.documento-corpo tr:last-child td { border-bottom: 0; }
+
+.passos {
+  counter-reset: passo;
+  list-style: none;
+  padding: 0 !important;
+}
+
+.passos li {
+  counter-increment: passo;
+  position: relative;
+  padding: 14px 16px 14px 58px;
+  margin: 10px 0;
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+  background: var(--cor-superficie);
+}
+
+.passos li::before {
+  content: counter(passo);
+  position: absolute;
+  left: 16px;
+  top: 13px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: .9rem;
+  background: var(--cor-primaria);
+  color: var(--cor-on-primaria);
+}
+
+/* O formulário da página inicial vive sobre fundo colorido; aqui, sobre o
+   fundo normal, ele precisa de borda e de cores de superfície. */
+.documento-corpo .form-aviso { margin-top: 14px; max-width: 520px; }
+.documento-corpo .form-aviso input {
+  background: var(--cor-superficie);
+  color: var(--cor-texto);
+  border: 1px solid var(--cor-borda);
+}
+.documento-corpo .form-aviso input:focus { outline-color: var(--cor-primaria); }
+.documento-corpo .form-aviso button {
+  background: var(--cor-primaria);
+  color: var(--cor-on-primaria);
+}
+.documento-corpo .mensagem-form {
+  max-width: 520px;
+  background: var(--cor-superficie-alta);
+  color: var(--cor-texto);
+}
+
+.nav a[aria-current="page"] { color: var(--cor-texto); }
+
+@media (max-width: 900px) {
+  .documento-grid { grid-template-columns: 1fr; gap: 20px; }
+  .documento-indice {
+    position: static;
+    padding: 16px 18px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 14px;
+    background: var(--cor-superficie);
+  }
+}
+
+@media print {
+  .cabecalho, .rodape, .documento-indice, .pular-conteudo { display: none !important; }
+  .documento { padding: 0; }
+  .documento-grid { display: block; }
+  .documento-corpo { max-width: none; }
+}

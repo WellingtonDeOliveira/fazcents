@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excluir conta — FazCentz</title>
+<meta name="description" content="Como excluir sua conta do aplicativo FazCentz e os dados guardados no servidor, pelo app ou por e-mail, e o que acontece com cada dado.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%AA%99%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="legal.css">
+</head>
+<body>
+
+<a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="cabecalho" id="topo">
+  <div class="container cabecalho-inner">
+    <a class="logo" href="./" aria-label="FazCents — página inicial">
+      <span class="logo-moeda" aria-hidden="true">₵</span>
+      <span>FazCents</span>
+    </a>
+
+    <nav class="nav" id="nav-principal">
+      <a href="./">Início</a>
+      <a href="privacidade.html">Privacidade</a>
+      <a href="termos.html">Termos de uso</a>
+      <a href="excluir-conta.html" aria-current="page">Excluir conta</a>
+    </nav>
+
+    <div class="cabecalho-acoes">
+      <button class="botao-tema" id="botao-tema" type="button" aria-label="Alternar modo escuro" aria-pressed="false">
+        <svg class="icone-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2.5 12h2.6M18.9 12h2.6M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        <svg class="icone-lua" viewBox="0 0 24 24" fill="currentColor"><path d="M20.7 14.9A8.5 8.5 0 1 1 9.1 3.3a7 7 0 0 0 11.6 11.6z"/></svg>
+      </button>
+      <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-principal">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo" class="documento">
+  <div class="container documento-grid">
+
+    <aside class="documento-indice" aria-label="Nesta página">
+      <strong>Nesta página</strong>
+      <ol>
+        <li><a href="#pelo-app">Pelo app</a></li>
+        <li><a href="#por-email">Sem acesso ao app</a></li>
+        <li><a href="#o-que-e-apagado">O que é apagado</a></li>
+        <li><a href="#o-que-fica">O que não é apagado</a></li>
+        <li><a href="#assinatura">Assinatura</a></li>
+      </ol>
+    </aside>
+
+    <article class="documento-corpo">
+      <h1>Excluir conta e dados do FazCentz</h1>
+      <p class="documento-data">Aplicativo FazCentz para Android · Última atualização: 27 de setembro de 2026</p>
+
+      <p>
+        Você pode excluir sua conta do FazCentz e todos os dados guardados no nosso servidor a qualquer
+        momento, sem custo. A exclusão é <strong>definitiva</strong>: depois dela, entrar de novo com o
+        mesmo e-mail cria uma conta nova, vazia.
+      </p>
+
+      <h2 id="pelo-app">Pelo app (imediato)</h2>
+      <ol class="passos">
+        <li>Abra o FazCentz e vá em <strong>Ajustes</strong>.</li>
+        <li>No cartão da sua conta, toque na seta <strong>Sua conta</strong>.</li>
+        <li>Toque em <strong>Excluir minha conta do servidor</strong>.</li>
+        <li>Confirme digitando o que o app pedir. A conta e os dados do servidor são apagados na hora.</li>
+      </ol>
+      <div class="documento-aviso">
+        <p>
+          <strong>Casa compartilhada:</strong> se outras pessoas estiverem na sua casa, o app pede um
+          passo antes. Se você é o proprietário, transfira a propriedade ou remova os outros membros. Se
+          você é membro da casa de outra pessoa, saia da casa. Isso evita que a exclusão da sua conta
+          apague os dados de quem divide a casa com você.
+        </p>
+      </div>
+
+      <h2 id="por-email">Sem acesso ao app</h2>
+      <p>
+        Se você não tem mais o app ou o aparelho, peça a exclusão por e-mail para
+        <a href="mailto:contato@fazcents.com.br">contato@fazcents.com.br</a>,
+        <strong>enviando a partir do e-mail da conta</strong> — é assim que confirmamos que o pedido é seu.
+        Concluímos a exclusão em até 15 dias e respondemos confirmando.
+      </p>
+
+      <form id="form-exclusao" class="form-aviso" novalidate>
+        <label for="email-conta" class="rotulo-oculto">E-mail da conta</label>
+        <input type="email" id="email-conta" name="email" placeholder="e-mail da sua conta" required autocomplete="email">
+        <button type="submit"><span class="rotulo-botao">Preparar e-mail</span></button>
+      </form>
+      <p id="mensagem-exclusao" class="mensagem-form" role="status" hidden></p>
+      <p><small>
+        O botão só abre o seu aplicativo de e-mail com a mensagem pronta. Nada é enviado por esta página.
+      </small></p>
+
+      <h2 id="o-que-e-apagado">O que é apagado</h2>
+      <ul>
+        <li>A conta: e-mail, nome de exibição, foto do perfil e senha.</li>
+        <li>A sua casa e todos os dados sincronizados nela: lançamentos, categorias, contas e cartões, pessoas, orçamentos, despesas fixas e preferências.</li>
+        <li>Convites abertos e o vínculo com a casa.</li>
+        <li>O registro do seu plano no nosso servidor.</li>
+      </ul>
+      <p>
+        Esses dados saem do banco de dados no momento da exclusão. Cópias de segurança automáticas do
+        provedor podem mantê-los por um período limitado, até serem sobrescritas, sem uso para nenhuma
+        outra finalidade.
+      </p>
+
+      <h2 id="o-que-fica">O que não é apagado</h2>
+      <ul>
+        <li>
+          <strong>Os dados no seu aparelho.</strong> Excluir a conta não apaga o que está no celular. Para
+          apagar, desinstale o app ou limpe os dados dele em <em>Configurações do Android › Apps ›
+          FazCentz › Armazenamento</em>.
+        </li>
+        <li>
+          <strong>Arquivos de backup</strong> que você exportou e guardou por conta própria.
+        </li>
+        <li>
+          <strong>Lançamentos que você fez na casa de outra pessoa.</strong> Eles pertencem àquela casa e
+          continuam com o proprietário dela depois que você sai.
+        </li>
+        <li>
+          <strong>Registros de compra da Google Play</strong>, que são mantidos pelo Google conforme as
+          regras dele.
+        </li>
+      </ul>
+
+      <h2 id="assinatura">Assinatura</h2>
+      <p>
+        <strong>Excluir a conta não cancela a assinatura.</strong> Antes, cancele pela Google Play ›
+        seu perfil › <em>Pagamentos e assinaturas</em> › <em>Assinaturas</em> › FazCentz. Veja também os
+        <a href="termos.html#assinaturas">Termos de uso</a> e a
+        <a href="privacidade.html">Política de Privacidade</a>.
+      </p>
+    </article>
+
+  </div>
+</main>
+
+<footer class="rodape">
+  <div class="container rodape-grid">
+    <div>
+      <a class="logo logo-rodape" href="./">
+        <span class="logo-moeda" aria-hidden="true">₵</span>
+        <span>FazCents</span>
+      </a>
+      <p>Organizar seu dinheiro com a gente FazCents!</p>
+    </div>
+    <nav class="rodape-links" aria-label="Documentos">
+      <a href="privacidade.html">Privacidade</a>
+      <a href="termos.html">Termos de uso</a>
+      <a href="excluir-conta.html">Excluir conta</a>
+    </nav>
+    <p class="rodape-copy">
+      &copy; <span id="ano"></span> FazCents. Projeto independente, não afiliado a bancos ou
+      instituições financeiras.
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="legal.js"></script>
+</body>
+</html>
