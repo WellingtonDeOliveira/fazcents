@@ -69,7 +69,7 @@
 
     <article class="documento-corpo">
       <h1>Política de Privacidade</h1>
-      <p class="documento-data">Aplicativo FazCentz para Android · Última atualização: 27 de setembro de 2026</p>
+      <p class="documento-data">Aplicativo FazCentz para Android · Última atualização: 1º de novembro de 2026</p>
 
       <section id="resumo" class="documento-resumo" aria-label="Resumo">
         <p><strong>Em poucas linhas:</strong></p>
@@ -127,6 +127,11 @@
               <td>Senha</td>
               <td>Você cria</td>
               <td>Entrar. Guardada apenas como resumo criptográfico (hash) pelo serviço de autenticação; nem nós conseguimos lê-la</td>
+            </tr>
+            <tr>
+              <td>Data e versão dos termos de uso aceitos</td>
+              <td>Registrado pelo app quando você marca “Li e aceito os termos de uso” para criar a conta</td>
+              <td>Comprovar qual versão dos <a href="termos.html">Termos de Uso</a> você aceitou</td>
             </tr>
             <tr>
               <td>Forma de entrada (e-mail ou Google) e datas de criação e último acesso</td>
@@ -196,9 +201,22 @@
         <li><strong>Backups e importações:</strong> os arquivos de backup (.zip) e as planilhas importadas (CSV) são criados ou escolhidos por você e ficam onde você os salvar. Não temos acesso a eles.</li>
       </ul>
       <p>
-        O app pede apenas duas permissões ao Android: <strong>internet</strong> e <strong>biometria</strong>.
-        Ele não acessa contatos, localização, câmera, microfone, SMS nem suas fotos.
+        O app pede ao Android as permissões de <strong>internet</strong> e <strong>biometria</strong> e,
+        para o Assistente, de <strong>microfone</strong> e de <strong>câmera</strong>. Estas duas só são
+        pedidas no primeiro uso do recurso, só funcionam quando você toca no botão correspondente e podem
+        ser negadas ou retiradas a qualquer momento nas configurações do Android (texto e galeria seguem
+        funcionando). Ele não acessa contatos, localização nem SMS, e só lê uma foto da galeria se você
+        a escolher para o Assistente.
       </p>
+
+      <h3>6.1 Assistente do app (planos Individual e Família)</h3>
+      <ul>
+        <li><strong>Texto, voz e foto são processados no aparelho.</strong> A voz usa o reconhecimento de fala do próprio Android, só no modo local; se o pacote de voz em português não estiver instalado, o app avisa e não grava. O app nunca usa reconhecimento de voz em nuvem.</li>
+        <li><strong>A leitura de fotos (OCR)</strong> de cupom, nota fiscal, comprovante de Pix ou print usa o <strong>Google ML Kit</strong> em modo local, com o modelo dentro do app. O envio de métricas de uso do ML Kit ao Google está bloqueado no app. Áudio, foto, texto e transcrição não são enviados a nós nem a terceiros.</li>
+        <li><strong>A foto não é guardada:</strong> ela é descartada logo depois da leitura.</li>
+        <li><strong>O histórico da conversa fica só na memória</strong> do aparelho: some quando você fecha o app, troca de perfil ou sai da conta, e não é gravado em arquivo nem em log.</li>
+        <li>Só o que você confirma vira lançamento ou cadastro, e passa a ser tratado como qualquer outro dado seu, conforme as seções acima.</li>
+      </ul>
 
       <h2 id="casa">7. Casa compartilhada</h2>
       <p>
@@ -221,6 +239,7 @@
           <tbody>
             <tr><td>Supabase</td><td>Servidor, banco de dados e autenticação das contas</td><td>São Paulo, Brasil</td></tr>
             <tr><td>Google (Sign-In, Play e AdMob)</td><td>Entrar com o Google, cobrança das assinaturas e anúncios do plano gratuito</td><td>Global</td></tr>
+            <tr><td>Google ML Kit (SDK)</td><td>Leitura de fotos pelo Assistente, executada no aparelho, sem envio de dados nem de métricas</td><td>No seu aparelho</td></tr>
             <tr><td>Cloudflare</td><td>Verificação anti-robô (Turnstile) e página que a exibe</td><td>Global</td></tr>
             <tr><td>Resend</td><td>Envio dos e-mails com os códigos de confirmação e de redefinição de senha</td><td>Estados Unidos</td></tr>
           </tbody>
