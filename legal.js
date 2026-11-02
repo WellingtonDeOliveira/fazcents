@@ -51,10 +51,10 @@
         return;
       }
 
-      var assunto = 'Excluir minha conta do FazCentz';
+      var assunto = 'Excluir minha conta do FazCents';
       var corpo =
         'Olá,\n\n' +
-        'Peço a exclusão da minha conta do FazCentz e de todos os dados dela no servidor.\n\n' +
+        'Peço a exclusão da minha conta do FazCents e de todos os dados dela no servidor.\n\n' +
         'E-mail da conta: ' + email + '\n\n' +
         'Estou enviando esta mensagem a partir do e-mail da conta.';
 
